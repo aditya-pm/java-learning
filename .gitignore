@@ -1,0 +1,14 @@
+*.class
+
+*.log
+
+.idea/
+*.iml/
+out/
+
+.vscode/
+
+.DS_Store
+Thumbs.db
+
+main.code-workspace
