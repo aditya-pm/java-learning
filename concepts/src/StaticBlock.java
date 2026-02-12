@@ -3,7 +3,7 @@ class MobileStaticBlock {
     static String category;
     static int phoneCount;
 
-    // static block: run by JVM once when class is loaded onto memory
+    // static block: runs once when the class is first loaded by the JVM
     static {
         System.out.println("Static block executed.");
         category = "Smartphone";
@@ -29,7 +29,13 @@ class MobileStaticBlock {
 public class StaticBlock {
 
     public static void main(String[] args) {
+
         System.out.println("Inside main");
+
+        // access static variable BEFORE creating object
+        System.out.println("Category is: " + MobileStaticBlock.category);
+        // if above line is commented out, then class will be loaded when
+        // new MobileStaticBlock(...) is called.
 
         MobileStaticBlock obj1 = new MobileStaticBlock("Apple", 1500);
         MobileStaticBlock obj2 = new MobileStaticBlock("Samsung", 1700);
