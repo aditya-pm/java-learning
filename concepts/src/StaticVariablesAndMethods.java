@@ -44,7 +44,7 @@ public class StaticVariablesAndMethods {
         Mobile obj1 = new Mobile("Apple", 1500);
         Mobile obj2 = new Mobile("Samsung", 1700);
 
-        System.out.println("=== Initial State ===");
+        System.out.println("--- Initial State ---");
         obj1.show();
         obj2.show();
 
@@ -56,17 +56,17 @@ public class StaticVariablesAndMethods {
         obj1.showPhoneCount();
         System.out.println();
 
-        // ✅ Change static variable via class
+        // change static variable via class
         Mobile.changeCategory("Premium Phone");
 
-        System.out.println("=== After Changing Category via Class ===");
+        System.out.println("--- After Changing Category via Class ---");
         obj1.show();
         obj2.show();
 
         // access static variable via object (allowed but misleading)
         obj1.category = "Budget Phone";
 
-        System.out.println("=== After Changing via Object ===");
+        System.out.println("--- After Changing via Object ---");
         obj1.show();
         obj2.show();
 
