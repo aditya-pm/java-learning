@@ -3,7 +3,7 @@ class MobileStaticBlock {
     static String category;
     static int phoneCount;
 
-    // static block
+    // static block: run by JVM once when class is loaded onto memory
     static {
         System.out.println("Static block executed.");
         category = "Smartphone";
@@ -29,7 +29,6 @@ class MobileStaticBlock {
 public class StaticBlock {
 
     public static void main(String[] args) {
-
         System.out.println("Inside main");
 
         MobileStaticBlock obj1 = new MobileStaticBlock("Apple", 1500);
@@ -38,6 +37,6 @@ public class StaticBlock {
         obj1.show();
         obj2.show();
 
-        System.out.println("Total phones: " + Mobile.phoneCount);
+        System.out.println("Total phones: " + MobileStaticBlock.phoneCount);
     }
 }
